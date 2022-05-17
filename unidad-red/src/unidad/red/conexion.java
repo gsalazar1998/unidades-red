@@ -253,6 +253,7 @@ public class conexion extends javax.swing.JFrame {
         try {
             String cmd = "cmd /C net use " + cbRed.getSelectedItem().toString() + ": \\\\192.168.100.9\\" + cbCarpeta.getSelectedItem().toString() + " /user:" + txtUsuario.getText() + " " + txtClave.getText() + " /persistent:yes";
             Runtime.getRuntime().exec(cmd);
+            JOptionPane.showMessageDialog(null, "unidad conectada ", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Error al querer conectar la unidad " + e, "Error", JOptionPane.WARNING_MESSAGE);
         }
