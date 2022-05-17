@@ -260,6 +260,7 @@ public class conexion extends javax.swing.JFrame {
             if (JOptionPane.showConfirmDialog(null, "Estas seguro que es esta unidad?", "Adevertencia",
                     JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION) {
                 Runtime.getRuntime().exec("cmd /C net use " + valor + ": /delete");
+                 Runtime.getRuntime().exec("cmd /C ");
             } else {
             }
         } catch (IOException e) {
