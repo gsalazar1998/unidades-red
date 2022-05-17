@@ -45,8 +45,9 @@ public class conexion extends javax.swing.JFrame {
         jLabel2 = new javax.swing.JLabel();
         txtUsuario = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        txtClave = new javax.swing.JTextField();
         btnConectar = new javax.swing.JButton();
+        txtclave = new javax.swing.JPasswordField();
+        cbclave = new javax.swing.JCheckBox();
         jPanel2 = new javax.swing.JPanel();
         jScrollPane1 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
@@ -115,34 +116,46 @@ public class conexion extends javax.swing.JFrame {
             }
         });
 
+        cbclave.setText("Ver clave");
+        cbclave.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                cbclaveActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout jPanel4Layout = new javax.swing.GroupLayout(jPanel4);
         jPanel4.setLayout(jPanel4Layout);
         jPanel4Layout.setHorizontalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel4Layout.createSequentialGroup()
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(63, 63, 63)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel4)
-                            .addComponent(jLabel1))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(cbCarpeta, 0, 257, Short.MAX_VALUE)
-                            .addComponent(cbRed, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(63, 63, 63)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel4)
+                                    .addComponent(jLabel1))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                                    .addComponent(cbCarpeta, 0, 257, Short.MAX_VALUE)
+                                    .addComponent(cbRed, 0, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)))
+                            .addGroup(jPanel4Layout.createSequentialGroup()
+                                .addGap(94, 94, 94)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
+                                    .addComponent(jLabel2)
+                                    .addComponent(jLabel3))
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(txtUsuario, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
+                                    .addComponent(txtclave))))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                        .addComponent(cbclave, javax.swing.GroupLayout.DEFAULT_SIZE, 121, Short.MAX_VALUE))
                     .addGroup(jPanel4Layout.createSequentialGroup()
                         .addGap(221, 221, 221)
-                        .addComponent(btnConectar))
-                    .addGroup(jPanel4Layout.createSequentialGroup()
-                        .addGap(94, 94, 94)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                            .addComponent(jLabel2)
-                            .addComponent(jLabel3))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(txtClave, javax.swing.GroupLayout.DEFAULT_SIZE, 257, Short.MAX_VALUE)
-                            .addComponent(txtUsuario))))
-                .addContainerGap(129, Short.MAX_VALUE))
+                        .addComponent(btnConectar)
+                        .addGap(0, 0, Short.MAX_VALUE)))
+                .addContainerGap())
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -156,14 +169,19 @@ public class conexion extends javax.swing.JFrame {
                     .addComponent(cbCarpeta, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(jLabel1))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
-                .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(jLabel2)
-                    .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
                 .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel3)
-                    .addComponent(txtClave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(19, 19, 19)
+                    .addGroup(jPanel4Layout.createSequentialGroup()
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel2)
+                            .addComponent(txtUsuario, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                        .addGroup(jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel3)
+                            .addComponent(txtclave, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(20, 20, 20))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel4Layout.createSequentialGroup()
+                        .addComponent(cbclave, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(11, 11, 11)))
                 .addComponent(btnConectar)
                 .addContainerGap())
         );
@@ -212,7 +230,7 @@ public class conexion extends javax.swing.JFrame {
 
         jTabbedPane2.addTab("Instrucciones", jPanel2);
 
-        jLabel5.setText("© 2022 - Desarrollo y Mantenimiento: Andres Salazar (gsalazar) - Versión del sitio 0.5");
+        jLabel5.setText("© 2022 - Desarrollo y Mantenimiento: Andres Salazar (gsalazar) - Versión del sitio 0.7");
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -250,14 +268,32 @@ public class conexion extends javax.swing.JFrame {
     }//GEN-LAST:event_btnEliminarActionPerformed
 
     private void btnConectarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConectarActionPerformed
+       
+        String clave=new String(txtclave.getPassword());
+        
         try {
-            String cmd = "cmd /C net use " + cbRed.getSelectedItem().toString() + ": \\\\192.168.100.9\\" + cbCarpeta.getSelectedItem().toString() + " /user:" + txtUsuario.getText() + " " + txtClave.getText() + " /persistent:yes";
+            if(txtUsuario.getText().isEmpty() || clave.isEmpty()){
+                JOptionPane.showMessageDialog(null, "Ingrese el usuario y/o contraseña","Error",JOptionPane.ERROR_MESSAGE);
+            }else{
+            String cmd = "cmd /C net use " + cbRed.getSelectedItem().toString() + ": \\\\192.168.100.9\\" + cbCarpeta.getSelectedItem().toString() + " /user:" + txtUsuario.getText() + " " + clave + " /persistent:yes";
             Runtime.getRuntime().exec(cmd);
-            JOptionPane.showMessageDialog(null, "unidad conectada ", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
+            JOptionPane.showMessageDialog(null, "Proceso realizado, revise si unidad esta conectada, en caso de no estarlo\nrevise si la contraseña o usuario fue el correcto.", "Mensaje", JOptionPane.INFORMATION_MESSAGE);
+            
+             System.out.println(clave);
+            }
         } catch (IOException e) {
             JOptionPane.showMessageDialog(null, "Error al querer conectar la unidad " + e, "Error", JOptionPane.WARNING_MESSAGE);
         }
     }//GEN-LAST:event_btnConectarActionPerformed
+
+    private void cbclaveActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_cbclaveActionPerformed
+      if(cbclave.isSelected()){
+      txtclave.setEchoChar((char)0);
+      }
+      else{
+      txtclave.setEchoChar('*');
+      }
+    }//GEN-LAST:event_cbclaveActionPerformed
 
     /**
      * @param args the command line arguments
@@ -300,6 +336,7 @@ public class conexion extends javax.swing.JFrame {
     private javax.swing.JComboBox<String> cbCarpeta;
     private javax.swing.JComboBox<String> cbRed;
     private javax.swing.JComboBox<String> cbUnidad;
+    private javax.swing.JCheckBox cbclave;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
@@ -312,7 +349,7 @@ public class conexion extends javax.swing.JFrame {
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JTabbedPane jTabbedPane2;
     private javax.swing.JTextArea jTextArea1;
-    private javax.swing.JTextField txtClave;
     private javax.swing.JTextField txtUsuario;
+    private javax.swing.JPasswordField txtclave;
     // End of variables declaration//GEN-END:variables
 }
